@@ -1,0 +1,144 @@
+.section-big-hero {
+  width: 100%;
+  position: relative;
+  top: -$headerHeight;
+  left: 0;
+  padding: $headerHeight 0;
+  background: $primaryLightColor;
+
+  @include responsive(tabletLandscape) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @include responsive(tabletPortrait) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    top: 0;
+  }
+
+  & > .container.flex {
+    @include responsive(tabletPortrait) {
+      flex-direction: column !important;
+    }
+  }
+
+  &__quick-purchase {
+    padding-top: 10rem;
+    flex-basis: 50%;
+
+    @include responsive(phone) {
+      padding-top: 5rem;
+    }
+  }
+
+  &__photo-container {
+    height: 55rem;
+    width: auto;
+    padding-top: 8rem;
+    flex-basis: 30%;
+
+    @include responsive(tabletPortrait) {
+      display: none;
+    }
+
+    &__photo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left;
+    }
+  }
+
+  &__title {
+    animation: moveInTop 1s ease;
+
+    @include responsive(tabletPortrait) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    color: $primaryColorDark;
+    animation: moveInLeft 1s ease;
+    @include responsive(phone) {
+      margin-bottom: 3rem !important;
+    }
+  }
+}
+
+.section-features {
+  background-color: $colorLightGray;
+  margin-top: -$headerHeight;
+  padding: 5rem;
+
+  @include responsive(tabletPortrait) {
+    margin-top: 0;
+    padding: 3rem;
+  }
+
+  .header-tertiary {
+    color: $primaryColorDark;
+  }
+
+  &__card-container {
+    @include displayGrid(3, 5rem);
+    @include responsive(tabletPortrait) {
+      @include displayGrid(1, 3rem);
+    }
+  }
+
+  &__card {
+    padding: 5rem 3rem;
+    background: $colorWhite;
+    box-shadow: 0 1.5rem 2.5rem rgba($colorBlack, 0.05);
+
+    @include responsive(tabletPortrait) {
+      text-align: center;
+    }
+
+    &--icon {
+      height: 10rem;
+      margin-bottom: 1.5rem;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &--title {
+      font-size: 3rem;
+      color: $primaryColorDark;
+    }
+
+    &--text {
+      font-size: 1.4rem;
+      color: $defaultTextColor;
+      @include responsive(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.section-quick-signup {
+  padding: 20rem;
+  background-color: $primaryColor;
+
+  @include responsive(tabletPortrait) {
+    padding: 10rem;
+  }
+
+  @include responsive(phone) {
+    padding: 5rem;
+  }
+
+  .header-primary {
+    color: $colorWhite;
+    font-weight: 200;
+    @include responsive(phone) {
+      font-size: 4.5rem;
+    }
+  }
+}

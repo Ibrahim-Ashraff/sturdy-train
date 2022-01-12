@@ -1,0 +1,112 @@
+// .app {
+//   &-header {
+//     height: 45em;
+//     background: linear-gradient(360deg, #132735, #1a78bf);
+//     text-align: center;
+//     & .container {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       flex-direction: column;
+//       height: 100%;
+//     }
+//     h1 {
+//       color: $colorLightGray;
+//       font-size: 4em;
+//       margin-bottom: 0.5em;
+
+//       @include responsive(phone) {
+//         padding: 0 2em;
+//         line-height: 1.4em;
+//       }
+//     }
+//     p {
+//       font-size: 1.8em;
+//       color: $colorMediumGray;
+//       @include responsive(phone) {
+//         font-size: 2em;
+//         padding: 0 2em;
+//       }
+//     }
+//   }
+//   &-info {
+//     padding-top: 5em;
+//     padding-bottom: 5em;
+
+//     @include responsive(phone) {
+//       padding-left: 3em;
+//       padding-right: 3em;
+//     }
+//     & .container {
+//       height: 100%;
+//       display: grid;
+//       grid-template-columns: repeat(2, 1fr);
+//       grid-gap: 2em;
+
+//       @include responsive(phone) {
+//         grid-template-columns: repeat(1, 1fr);
+//       }
+//     }
+//     &-lang {
+//       display: flex;
+//       flex-direction: column;
+//       background-color: $colorWhite;
+//       box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.05);
+//       border-radius: 0.6em;
+//       padding: 3em;
+
+//       @include responsive(phone) {
+//         padding: 4em 2em;
+//         justify-content: center;
+//         align-items: center;
+//         text-align: center;
+//       }
+
+//       & .logo {
+//         height: 100px;
+//         width: 100px;
+//         margin-bottom: 1.5em;
+//       }
+//     }
+//     &-text {
+//       h3 {
+//         font-size: 2em;
+//         margin-bottom: 0.5em;
+
+//         @include responsive(phone) {
+//           font-size: 3em;
+//         }
+//       }
+//       p {
+//         font-size: 1.6em;
+//         margin-bottom: 0.5em;
+//         @include responsive(phone) {
+//           font-size: 2em;
+//         }
+//       }
+//       a {
+//         font-size: 1.4em;
+//         color: $primaryColor;
+//         &:hover {
+//           text-decoration: underline;
+//         }
+//         @include responsive(phone) {
+//           font-size: 2em;
+//         }
+//       }
+//     }
+//   }
+//   & .appreciation {
+//     &-photo {
+//       height: 20em;
+//       margin-bottom: 4em;
+//     }
+//     &-text {
+//       text-align: center;
+//       font-size: 2.4em;
+//       font-weight: normal;
+//       color: $colorDarkGray1;
+//       padding-bottom: 2em;
+//     }
+//   }
+// }

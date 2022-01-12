@@ -1,0 +1,68 @@
+.profile-card {
+  margin-top: 2em;
+  padding-bottom: 4em;
+  padding-right: 237px;
+
+  .grid-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3em;
+  }
+
+  &-block {
+    background-color: #fff;
+    padding: 2.5em 2em;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 211px;
+    width: 232px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  //Animate grids
+  &-block:hover {
+    transform: translateY(-3px); /*Negative value to go up*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  &-block:active {
+    transform: translateY(-1px); /*In relation to the in initial link state*/
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.info-block {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+
+  &-content {
+    display: flex;
+    // justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+  &-row {
+    margin-right: 140px;
+    width: 33.33%;
+  }
+}

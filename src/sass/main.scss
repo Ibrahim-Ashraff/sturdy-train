@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+
+// Abstract files
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Base files
+@import "base/animation";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+// Component files
+@import "components/authHeader";
+@import "components/button";
+@import "components/card";
+@import "components/error";
+@import "components/form";
+@import "components/header";
+@import "components/leftNav";
+@import "components/logo";
+@import "components/spinner";
+@import "components/table";
+@import "components/toolbar";
+@import "components/widget";
+@import "components/modal";
+@import "components/slider";
+@import "components/subHeader";
+@import "components/toast";
+@import "components/empty.scss";
+@import "components/pagination.scss";
+
+// Layout files
+@import "layout/container";
+@import "layout/footer";
+
+// Page files
+@import "pages/auth";
+@import "pages/dashboard";
+@import "pages/home";

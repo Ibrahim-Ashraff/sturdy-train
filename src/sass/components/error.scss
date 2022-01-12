@@ -1,0 +1,27 @@
+.error {
+  &-icon {
+    margin-bottom: 4em;
+  }
+  &-title {
+    font-size: 2.8em;
+    letter-spacing: -1px;
+    color: $colorDarkGray1;
+    margin-bottom: 1em;
+    &.small {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+  &-message {
+    color: $colorDarkGray2;
+    font-size: 1.8em;
+    &.small {
+      font-size: 1.45em;
+    }
+    & a {
+      color: $primaryColor;
+      cursor: pointer;
+    }
+  }
+}

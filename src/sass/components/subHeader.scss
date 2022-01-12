@@ -1,0 +1,89 @@
+.sub-header {
+  margin-left: 25em;
+  padding: 12em 5em 0;
+
+  li {
+    display: inline-block;
+    margin-right: 4em;
+  }
+
+  // @include responsive(smallScreen) {
+  //   margin-left: 300px;
+  //   padding: 13em 0em 0px;
+  //   font-size: 7.5px;
+  // }
+
+  @include responsive(phone) {
+    display: none; //Hide sub header on phone screen
+
+    // left: 10px;
+    // font-size: 2.5px;
+    // padding: 28em 2em;
+  }
+
+  @include responsive(tabletPortrait) {
+    left: 0px;
+  }
+
+  a {
+    font-size: 1.4em;
+    position: relative;
+    font-weight: 500;
+    color: #333;
+    &.active {
+      color: $primaryColor;
+      &::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: $primaryColor;
+        display: block;
+      }
+    }
+  }
+}
+
+.guardian-sub-header {
+  // margin-left: 300px;
+  // padding: 12em 5em 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  li {
+    display: inline-block;
+    margin-right: 5em;
+    font-size: 1.5em;
+    position: relative;
+    font-weight: 500;
+    color: #333;
+  }
+
+  @include responsive(phone) {
+    display: none; //Hide sub header on phone screen
+
+    // left: 10px;
+    // font-size: 2.5px;
+    // padding: 28em 2em;
+  }
+
+  @include responsive(tabletPortrait) {
+    left: 0px;
+  }
+
+  a {
+    font-size: 1.5em;
+    position: relative;
+    font-weight: 500;
+    color: #333;
+    &.active {
+      color: $primaryColor;
+      &::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: $primaryColor;
+        display: block;
+      }
+    }
+  }
+}

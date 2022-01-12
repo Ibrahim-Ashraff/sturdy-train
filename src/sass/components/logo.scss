@@ -1,0 +1,23 @@
+.logo {
+  width: 100%;
+
+  @include responsive(tabletLandscape) {
+    width: 120px;
+  }
+
+  & img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+
+  & h3 {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    & span {
+      color: $primaryColor;
+    }
+  }
+}

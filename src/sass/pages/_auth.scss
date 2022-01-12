@@ -1,0 +1,74 @@
+.section-access {
+  display: flex;
+
+  & > .logo {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+  }
+
+  &__info {
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6f2ff;
+
+    & > .access-photo-area {
+      width: 420px;
+      height: auto;
+
+      & > .access-photo {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        animation: expandImage 1s ease;
+      }
+    }
+
+    @include responsive(tabletPortrait) {
+      display: none;
+    }
+  }
+
+  &__panel {
+    background-color: $colorWhite;
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .access-card {
+      width: 420px;
+      position: relative;
+
+      & > .logo {
+        position: absolute;
+        top: -10rem;
+      }
+
+      &__title {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+
+        span {
+          font-weight: normal;
+          display: block;
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    @include responsive(tabletPortrait) {
+      padding: 15rem 3rem 0;
+      width: 100%;
+      align-items: flex-start;
+    }
+  }
+}
+
+.PhoneInputCountryIcon--border {
+  box-shadow: none;
+}

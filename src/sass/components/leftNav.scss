@@ -1,0 +1,109 @@
+.left-nav {
+  height: 100vh;
+  width: 25em;
+  position: fixed;
+  background: url("../../assets/images/bg-pattern.png") #f5f5f5 no-repeat 35%
+    100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  & .brand-logo {
+    width: 16em;
+    margin: 0 auto;
+    height: 9em;
+    display: flex;
+    align-items: center;
+  }
+
+  & .closeNav {
+    display: none;
+    margin-left: 170px;
+    background-color: #e6e6e6;
+
+    svg {
+      width: 90%;
+      height: 90%;
+    }
+
+    @include responsive(phone) {
+      display: block;
+    }
+
+    @include responsive(tabletPortrait) {
+      display: block;
+    }
+  }
+
+  &-list {
+    margin-top: 5em;
+    padding: 0 2.5em;
+    li {
+      display: block;
+      margin-bottom: 2em;
+    }
+    a {
+      border-radius: 4px;
+      color: #333;
+      font-size: 1.4em;
+      padding: 0.75em 1.5em;
+      display: flex;
+
+      &.active {
+        background-color: #e6e6e6;
+        font-weight: 600;
+      }
+      svg {
+        margin-top: 1px;
+        margin-right: 15px;
+        font-size: 1.3em;
+      }
+    }
+  }
+  // Phone screen responsiveness
+  @include responsive(phone) {
+    box-shadow: none;
+    animation-name: moveInLeft; //test animation
+    animation-duration: 0.25s;
+    display: none; // set left nav display to hidden.
+  }
+
+  @include responsive(tabletPortrait) {
+    box-shadow: none;
+    animation-name: moveInLeft; //test animation
+    animation-duration: 0.25s;
+    display: none; // set left nav display to hidden.
+  }
+
+  &.open {
+    display: block;
+  }
+  &.close {
+    display: none;
+  }
+
+  & .suggestion-box {
+    padding: 2.5em;
+    position: relative;
+    bottom: 0em;
+    &-content {
+      background-color: #e6e6e6;
+      padding: 2.5em;
+      border-radius: 0.4em;
+      text-align: center;
+      h3 {
+        font-weight: 500;
+        font-size: 1.5em;
+        line-height: 1.4em;
+        margin-bottom: 1em;
+      }
+      a {
+        background-color: #fff;
+        padding: 0.75em;
+        border-radius: 0.4em;
+        font-size: 1.3em;
+        color: #666666;
+      }
+    }
+  }
+}

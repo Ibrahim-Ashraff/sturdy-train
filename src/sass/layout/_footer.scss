@@ -1,0 +1,39 @@
+.footer {
+  background-color: $colorWhite;
+  padding: 5rem;
+
+  .container {
+    @include displayGrid(4, 2rem);
+    @include responsive(tabletPortrait) {
+      @include displayGrid(1, 2rem);
+    }
+  }
+
+  &__item {
+    ul {
+    }
+
+    li {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $defaultTextColor;
+
+      @include responsive(phone) {
+        font-size: 2rem;
+      }
+    }
+
+    &--text {
+      font-size: 1.4rem;
+      color: $defaultTextColor;
+      @include responsive(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+}

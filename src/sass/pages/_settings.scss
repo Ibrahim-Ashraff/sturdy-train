@@ -1,0 +1,12 @@
+.settings {
+  // overflow-x: hidden;
+
+  //Phone responsiveness
+  @include responsive(phone) {
+    max-width: 100%;
+    // overflow-x: hidden;
+    .flex {
+      //background-color: red;
+    }
+  }
+}

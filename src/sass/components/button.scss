@@ -1,0 +1,116 @@
+.button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.2em;
+  padding: 0.9em;
+  min-height: 0px;
+  position: relative;
+
+  // Button sizes
+  &.wide {
+    width: 100%;
+  }
+
+  &.small {
+    min-width: 10em;
+    font-size: 1.1em;
+    padding: 1em;
+  }
+  &.medium {
+    min-width: 15em;
+    font-size: 1.2em;
+    padding: 1.2em;
+  }
+  // Button types
+  &--contained {
+    @include responsive(phone) {
+      background-color: transparent;
+      color: #320e3b;
+    }
+    &:disabled {
+      background-color: #320e3b80;
+      cursor: not-allowed;
+    }
+    background-color: $primaryColor;
+    color: $colorWhite;
+  }
+
+  &--danger {
+    background-color: $colorRed;
+    color: $colorWhite;
+  }
+
+  &--grey {
+    background-color: #eee;
+    color: black;
+  }
+
+  &--outlined {
+    background-color: transparent;
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+    border-radius: 0.2em;
+  }
+
+  &--right {
+    float: right;
+  }
+
+  // Button loader
+  &--loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 3em;
+    height: 3em;
+    border: 4px solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s linear infinite;
+  }
+
+  &--loading &__text {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  // Button text
+  &__text {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+
+  &__text--green {
+    font-size: 1em;
+    font-weight: 600;
+    color: $primaryColor;
+  }
+}
+
+.icon {
+  color: red;
+}
+
+.icon__flex {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+.go-back {
+  // margin-bottom: 2.5em;
+  font-size: 1.6em;
+  cursor: pointer;
+  & svg {
+    position: relative;
+    top: 0.1em;
+    right: 0.4em;
+  }
+}

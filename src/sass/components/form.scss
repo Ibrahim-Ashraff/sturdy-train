@@ -1,0 +1,215 @@
+.form {
+  & input[type="checkbox"] {
+    -webkit-appearance: auto;
+    width: 1.25em;
+    height: 1.25em;
+    border: none;
+  }
+  & .checkbox {
+    display: flex;
+    align-items: center;
+    & span {
+      margin-left: 1em;
+    }
+  }
+  @include responsive(phone) {
+    margin-top: 50px;
+  }
+
+  @include responsive(tabletPortrait) {
+    margin-top: 50px;
+  }
+
+  &-phone-input {
+    background: $colorWhite;
+    width: 100%;
+    padding: 0 0.94em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    & input {
+      background: transparent;
+      color: $defaultTextColor;
+      font-family: $textFont;
+      width: 100%;
+      border: none;
+      outline: none;
+      height: 2.8125em;
+      padding: 0 0.94em;
+      font-size: 1.4em;
+    }
+  }
+  &-group {
+    margin-bottom: 10px;
+    position: relative;
+    // display: flex;
+    // grid-area: span 1 / span 2 / auto / auto;
+    // gap: 0px 4em;
+  }
+  &-action {
+    a {
+      margin-bottom: 20px;
+      display: block;
+      font-size: 1.4em;
+      color: $primaryColor;
+    }
+  }
+  & label {
+    display: block;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: $defaultTextColor;
+    font-family: $textFont;
+    position: relative;
+
+    &.required::after {
+      content: "*";
+      margin-left: 3px;
+      font-size: 16px;
+      color: $colorRed;
+    }
+  }
+  &-input,
+  .css-wmw4vi-ReactDropdownSelect {
+    background-color: #fff;
+    color: $defaultTextColor;
+    font-family: $textFont;
+    width: 100%;
+    border: 1px solid $coloGray;
+    outline: none !important;
+    height: 2.8125em;
+    border-radius: 4px;
+    padding: 0 0.94em;
+    font-size: 1.4em;
+    // -webkit-appearance: none;
+
+    &.small {
+      height: 3.5em;
+      width: 80%;
+    }
+    &--error {
+      border-color: $colorRed;
+      background-color: #f9e5e3;
+      &-message {
+        font-size: 1.3em;
+        color: $colorRed;
+      }
+    }
+    &.password {
+      font: large Verdana, sans-serif;
+      letter-spacing: 1px;
+      font-size: 1.4em;
+
+      &::placeholder {
+        font-family: $textFont;
+        font-size: 1em;
+        letter-spacing: normal;
+      }
+    }
+  }
+  .react-dropdown-select-input {
+    font-family: $textFont;
+  }
+  & .password-revealer {
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    top: 38px;
+    right: 10px;
+  }
+  &-footer {
+    padding-top: 2em;
+    font-size: 1.4em;
+    a {
+      color: $primaryColor;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p:first-child {
+      margin-bottom: 2em;
+    }
+  }
+  .select-container {
+    position: relative;
+    svg {
+      position: absolute;
+      top: 0.9em;
+      right: 0.7em;
+      font-size: 1.9em;
+    }
+  }
+}
+
+// class form
+.classform {
+  &-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  & h2 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &-action {
+    a {
+      margin-bottom: 20px;
+      display: block;
+      font-size: 1.4em;
+      color: $primaryColor;
+    }
+  }
+  & label {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: $defaultTextColor;
+    font-family: $textFont;
+  }
+  &-input {
+    color: $defaultTextColor;
+    font-family: $textFont;
+    width: 100%;
+    border: 1px solid #eee;
+    outline: none;
+    height: 45px;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 1.5em;
+
+    &::placeholder {
+      font-size: 1.3em;
+    }
+
+    &--error {
+      border-color: $colorRed;
+      background-color: #f9e5e3;
+      &-message {
+        font-size: 1.3em;
+        color: $colorRed;
+      }
+    }
+
+    &-footer {
+      padding-top: 20px;
+      font-size: 14px;
+      a {
+        color: $primaryColor;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      p:first-child {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}

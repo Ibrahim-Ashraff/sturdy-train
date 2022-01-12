@@ -1,0 +1,23 @@
+.main-container {
+  margin-left: 25em;
+  padding: 10em 5em 0;
+  position: relative;
+
+  @include responsive(phone) {
+    margin-left: 0;
+    padding: 18em 2em 0;
+  }
+}
+.container {
+  margin: 0 auto;
+  max-width: $containerWidth;
+  width: 100%;
+  &.md {
+    max-width: 100em;
+  }
+
+  &.flex {
+    height: 100%;
+    @include displayFlex;
+  }
+}

@@ -1,0 +1,76 @@
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1002;
+  background-color: #fcfcf9;
+  border-radius: 5px;
+  width: 34.375em;
+  overflow-y: auto;
+  min-height: auto;
+  max-height: 80em;
+  padding: 5em;
+  // display: none;
+  left: 0;
+  top: 5%;
+  right: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  & &-title {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+    &--small {
+      font-size: 2em;
+      font-weight: 600;
+    }
+  }
+  @include responsive(phone) {
+    top: 15%;
+    width: 100% !important;
+    border-radius: 0;
+    padding: 3em;
+  }
+  & h3 {
+    font-size: 1.5em;
+    text-align: left;
+    font-weight: normal;
+  }
+
+  & p {
+    font-size: 1.6em;
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    cursor: pointer;
+    // color: $darkLight;
+  }
+
+  &__title {
+    margin-bottom: 1.5em;
+  }
+
+  &__success-image {
+    height: 300px;
+    width: 100%;
+  }
+}

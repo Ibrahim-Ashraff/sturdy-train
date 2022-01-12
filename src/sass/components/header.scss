@@ -1,0 +1,180 @@
+.header {
+  height: 9em;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 25em);
+  position: absolute;
+  top: 0;
+  left: 25em;
+  padding: 0 5em;
+  background-color: #fff;
+  z-index: 1;
+
+  @include responsive(phone) {
+    background-color: #fcfcf9;
+    left: -2em;
+    width: calc(100% - -4em);
+  }
+
+  .submenu,
+  .notification-submenu {
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 45px;
+    right: 0;
+    min-width: 15em;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+
+    &.notification {
+      top: 0;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-list {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      li {
+        display: block;
+
+        a {
+          color: #666666;
+          font-size: 14px;
+          padding: 0.5em 1em;
+          display: block;
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+  }
+
+  .notification-submenu {
+    min-width: 25em;
+  }
+
+  &-title {
+    h1 {
+      font-size: 2.4em;
+
+      @include responsive(phone) {
+        display: none;
+      }
+
+      span {
+        font-weight: normal;
+      }
+    }
+  }
+
+  &-hamburger {
+    display: none;
+    position: relative;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    //display hamburger menu on mobile view
+    @include responsive(phone) {
+      display: block;
+      position: absolute;
+      z-index: 100;
+    }
+
+    @include responsive(tabletPortrait) {
+      display: block;
+      position: absolute;
+      z-index: 100;
+    }
+  }
+
+  & .user-widget {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 350px;
+    & .notification {
+      height: 50px;
+      width: 50px;
+      position: relative;
+      cursor: pointer;
+      &-row {
+        display: flex;
+        flex-direction: column;
+      }
+      &-icon {
+        height: 50px;
+        width: 50px;
+        color: #c7cbd7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 60%;
+          height: 60%;
+        }
+      }
+      &-count {
+        background-color: #f30;
+        color: #fff;
+        height: 18px;
+        width: 18px;
+        border-radius: 9px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-weight: 600;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+      }
+    }
+    & .user-profile {
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+
+      &-photo {
+        height: 40px;
+        width: 40px;
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        margin-left: 20px;
+
+        & img {
+          border-radius: 20px;
+        }
+      }
+
+      &-name {
+        font-size: 1.6em;
+        flex: 1;
+        margin-left: 20px;
+        position: relative;
+        padding-right: 1em;
+        @include responsive(phone) {
+          display: none;
+        }
+
+        span {
+          position: absolute;
+          top: 0.15em;
+          color: #c7cbd7;
+        }
+      }
+    }
+  }
+}
